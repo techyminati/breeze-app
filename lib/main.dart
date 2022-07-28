@@ -14,14 +14,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
     return MaterialApp(
       title: 'Breeze',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Breeze'),
         ),
-        body: const Center(
-          child: Text('Feel the wind!'),
+  	    body: Center(
+  	      child: Text(wordPair.asPascalCase),
         ),
       ),
     );
